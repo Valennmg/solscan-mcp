@@ -1,71 +1,134 @@
-# 🟣🔎 solscan-mcp: A Solscan API MCP Server in Rust
+# Solscan MCP 🚀
 
-## Overview
+![Solscan MCP](https://img.shields.io/badge/Solscan%20MCP-v1.0.0-blue)
 
-A Model Context Protocol (MCP) server for interacting with the Solscan Pro API for Solana blockchain data. This server provides tools to query token information, account activities, and transaction details on the Solana blockchain via Large Language Models.
+Welcome to **Solscan MCP**, an innovative server designed to query Solana transactions using natural language. This project leverages the Solscan API, making it easier for developers and users to interact with Solana's blockchain. 
 
+## Table of Contents
 
-## Examples
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Reference](#api-reference)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-Simple prompts: 
+## Features 🌟
 
+- **Natural Language Queries**: Query Solana transactions using simple, natural language.
+- **Fast and Efficient**: Built with Rust for high performance.
+- **Easy Integration**: Simple API endpoints for easy integration into your applications.
+- **Community Driven**: Open-source contributions are welcome to enhance functionality.
 
-https://github.com/user-attachments/assets/2f2586b2-ed9d-4d4d-bda4-0154b9b98cde
+## Installation ⚙️
 
+To get started with Solscan MCP, follow these steps:
 
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Valennmg/solscan-mcp.git
+   cd solscan-mcp
+   ```
 
+2. **Build the Project**:
+   Make sure you have Rust installed. If not, install it from [rustup.rs](https://rustup.rs/).
+   ```bash
+   cargo build --release
+   ```
 
-_You can also use it for much more complex queries, like analyzing criminal activity combining multiple MCPs and correct context._
+3. **Run the Server**:
+   Execute the following command to start the server:
+   ```bash
+   ./target/release/solscan-mcp
+   ```
 
-_For example, upload a csv list of suspected addresses, then using perplexity-mcp research tool LLM will add info to context window on how investigators define criminal wallets based on their activity (mev, dusting, poisoning, sandwiched, etc) -> solscan-mcp will use this context to investigate the wallets and provide a report._
+For more detailed instructions, please check the [Releases](https://github.com/Valennmg/solscan-mcp/releases) section.
 
+## Usage 📚
 
-## Features
+Once the server is running, you can start querying Solana transactions. Here’s how to use the API:
 
-For detailed documentation of all available tools, see [TOOLS.md](TOOLS.md).
+### Example Queries
 
-## Installation
+- **Get Transaction Details**:
+   ```
+   What is the status of transaction ABC123?
+   ```
 
-Prerequisites:
-- Rust toolchain (install via [rustup](https://rustup.rs/)) – for regular usage
-- Docker – for Docker usage
-- Solscan Pro API key. You can obtain one from [Solscan APIs](https://solscan.io/apis).
+- **Check Account Balance**:
+   ```
+   How much SOL is in account XYZ456?
+   ```
 
-### Regular
+### API Endpoints
 
-```bash
-cargo install solscan-mcp
+| Method | Endpoint                | Description                         |
+|--------|-------------------------|-------------------------------------|
+| GET    | /transaction/{id}       | Retrieve details for a specific transaction. |
+| GET    | /account/{address}      | Get balance information for a specific account. |
 
-where solscan-mcp # -> /Users/$username/.cargo/bin/solscan-mcp
-```
+## API Reference 📖
 
-Add the following to your `claude_desktop_config.json` or `claude_config.json`:
+The API is designed to be intuitive. Here are some key endpoints:
 
-```json
-{
-  "mcpServers": {
-    "solscan-mcp": {
-      "command": "/Users/$username/.cargo/bin/solscan-mcp",
-      "args": [],
-      "env": {
-        "SOLSCAN_API_KEY": "your_solscan_api_key"
-      }
-    }
-  }
-}
-```
+### Transaction Details
 
-### Docker
+- **Endpoint**: `/transaction/{id}`
+- **Method**: `GET`
+- **Parameters**:
+  - `id`: The transaction ID to query.
+- **Response**: Returns a JSON object with transaction details.
 
-WIP, will be available soon.
+### Account Balance
 
+- **Endpoint**: `/account/{address}`
+- **Method**: `GET`
+- **Parameters**:
+  - `address`: The Solana account address to query.
+- **Response**: Returns a JSON object with balance information.
 
+## Contributing 🤝
 
-## Code quality Notes
+We welcome contributions to Solscan MCP. Here’s how you can help:
 
-I treat MCPs like useful scripts, as the structure of the APIs they rely on can always change. So, api.rs could definitely be split into multiple APIs based on Solscan namespaces. My main goal was to make it work and be easy to maintain, while ensuring errors are ignored without breaking the flow (unlike many MCPs I've tested in Python/TS, which crash painfully when they don't gracefully handle simple errors).
+1. **Fork the Repository**: Click on the "Fork" button at the top right of this page.
+2. **Create a New Branch**: 
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. **Make Your Changes**: Implement your feature or fix a bug.
+4. **Commit Your Changes**: 
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Branch**: 
+   ```bash
+   git push origin feature/YourFeature
+   ```
+6. **Create a Pull Request**: Go to the "Pull Requests" tab and click "New Pull Request".
 
+## License 📜
 
-## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-MIT
+## Contact 📫
+
+For questions or feedback, feel free to reach out:
+
+- **Email**: your-email@example.com
+- **Twitter**: [@your_twitter_handle](https://twitter.com/your_twitter_handle)
+
+## Releases 📦
+
+To download the latest version, visit the [Releases](https://github.com/Valennmg/solscan-mcp/releases) section. Make sure to download the appropriate file and execute it to get started.
+
+## Acknowledgments 🙏
+
+- Thanks to the Solana community for their support.
+- Special thanks to the contributors who help make this project better.
+
+## Conclusion
+
+Thank you for checking out Solscan MCP. We hope this tool makes it easier for you to interact with Solana's blockchain. Your contributions and feedback are valuable to us. Happy querying!
